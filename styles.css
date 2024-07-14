@@ -1,3 +1,224 @@
-p {
-    color: blue;
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+.container {
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 0.5fr 0.5fr 5fr;
+  grid-template-areas:
+    "side-bar header"
+    "side-bar headerv2"
+    "side-bar content-body";
+}
+
+.container div {
+  font-size: 18px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  justify-content: start;
+}
+
+div.logo {
+  padding-left: 0px;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  background-color: #38184a;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px;
+  padding-left: 30px;
+}
+
+div.header-right-section {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  padding-right: 15px;
+  align-items: center;
+}
+
+.headerv2 {
+  grid-area: headerv2;
+  background-color: #38184a;
+  display: grid;
+  grid-auto-flow: column;
+  padding-bottom: 15px;
+  padding-left: 3%;
+}
+
+div.v2header-left-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+div.v2header-right-section {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: end;
+  padding-right: 25px;
+}
+
+div.v2header-right-section > button {
+  display: inline-block;
+  padding: 8px 16px; /* Adjust padding to increase or decrease button size */
+  border: none;
+  border-radius: 20px; /* Adjust border-radius for more or less rounded corners */
+  background-color: #be52d6; /* Button background color */
+  color: #fff; /* Button text color */
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.v2header-left-section .welcome-text {
+  font-size: 20px;
+  text-align: start;
+}
+
+.v2header-left-section .hi-text {
+  font-size: 15px;
+}
+
+.side-bar {
+  grid-area: side-bar;
+  background-color: #4a1d6c;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.5fr 0.1fr;
+  padding: 15px;
+}
+
+div.upper-sidebar {
+  padding-left: 15px;
+  display: grid;
+  grid-template-rows: repeat(6, minmax(30px, 50px));
+  align-items: start;
+}
+
+div.lower-sidebar {
+  padding-left: 15px;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(30px, 50px));
+  align-items: start;
+}
+
+.side-bar .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.content-body {
+  grid-area: content-body;
+  background-color: #aa8dc1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-bottom: 50px;
+}
+
+.contents1 {
+  grid-area: contents1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 5px 15px 15px 15px;
+  align-items: center;
+}
+
+.contents1 .card {
+  background-color: #bd60ba;
+  color: black;
+  text-align: center;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.right-content-cards {
+  padding-right: 15px;
+}
+
+.right-content-cards .card {
+  background-color: #bd60ba;
+  color: black;
+  text-align: center;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 200px;
+  max-width: 400px;
+}
+
+.label {
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: +1.3px;
+  margin-bottom: 1rem;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 2.8rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
 }
